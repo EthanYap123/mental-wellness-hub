@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mental Wellness Hub</title>
+  <meta name="description" content="Mental Wellness Hub - Your go-to resource for mindfulness, stress management, and mental health tips.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SKIP LINK -->
+  <a href="#mainContent" class="visually-hidden-focusable">Skip to main content</a>
+
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-expand bg-white shadow-sm rounded px-3 py-2 mb-5" aria-label="Primary navigation">
+    <div class="container-fluid">
+      <div class="navbar-nav">
+        <a href="index.html" class="nav-link me-3 active fw-bold" aria-current="page">Home Page</a>
+        <a href="info.html" class="nav-link me-3">Informational Page</a>
+        <a href="form.html" class="nav-link">Mental Health Check In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent" class="container" tabindex="-1" aria-labelledby="mainHeading">
+    
+    <!-- WELCOME SECTION -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h1 id="mainHeading" class="display-4 fw-bold text-primary mb-4">Welcome to Your Mental Wellness Hub</h1>
+        <p class="lead text-secondary mb-4">
+          Find resources and tips to support your mental health and wellbeing.
+          Whether you want to learn mindfulness or manage stress, this is your space.
+        </p>
+        <a href="info.html" class="btn btn-primary">Learn More</a>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <img
+          src="https://media.istockphoto.com/id/1479494606/vector/mental-health-concept.jpg?s=612x612&w=0&k=20&c=frJSKdP-5fNTvhqHEuSFVB47wxMRH_y866ebJhuUTTU="
+          alt="Illustration of mental wellness concept"
+          class="img-fluid rounded shadow-sm"
+          loading="lazy"
+          decoding="async"
+          width="612"
+          height="612"
+        >
+        <p class="text-muted small mt-2 mb-5">Find your inner peace and clarity.</p>
+      </div>
+    </div>
+
+    <!-- CAROUSEL SECTION -->
+    <section class="mt-5 mb-5">
+      <h2 class="mb-4 text-center text-primary">Quick Tips for Mental Wellness</h2>
+
+      <div id="tipsCarousel" class="carousel slide mx-auto shadow" data-bs-ride="carousel" style="max-width: 800px;">
+        
+        <!-- CAROUSEL INDICATORS -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mindfulness"></button>
+          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="1" aria-label="Hydration"></button>
+          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="2" aria-label="Take Breaks"></button>
+          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="3" aria-label="Learn Continuously"></button>
+          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="4" aria-label="Reach Out"></button>
+        </div>
+
+        <!-- CAROUSEL IMAGES -->
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <div class="position-relative">
+              <img 
+              src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1000&q=80"
+              class="d-block w-100 rounded"
+              alt="Mindfulness"
+              style="height: 550px; object-fit: cover;"
+              >
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <p class="mb-0 fs-6 text-white">🌱 <strong>Practice Mindfulness:</strong> Spend a few minutes each day focusing on your breath or a calming activity.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item active">
+            <div class="position-relative">
+              <img 
+              src="https://www.nutritionnews.abbott/content/dam/an/newsroom/us/en/images/articles/healthy-living/diet-wellness/New%20Image_Hydration%20and%20Mental%20Health-930x405-young-fit-woman-drinking.jpg"
+              class="d-block w-100 rounded"
+              alt="Hydrated"
+              style="height: 550px; object-fit: cover;"
+              >
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <p class="mb-0 fs-6 text-white">💧 <strong>Stay Hydrated:</strong> Drinking enough water can boost your energy and improve your mood.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="position-relative">
+              <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+              class="d-block w-100 rounded"
+              alt="Take Breaks"
+              style="height: 550px; object-fit: cover;"
+              >
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <p class="mb-0 fs-6 text-white">🧘 <strong>Take Breaks:</strong> Step away from screens and stretch or walk outside for mental clarity.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="position-relative">
+              <img 
+              src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1000&q=80"
+              class="d-block w-100 rounded"
+              alt="Learn"
+              style="height: 550px; object-fit: cover;"
+              >
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <p class="mb-0 fs-6 text-white">📖 <strong>Learn Continuously:</strong> Explore mental health resources and stay informed.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="position-relative">
+              <img 
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=80"
+              class="d-block w-100 rounded"
+              alt="Reach Out"
+              style="height: 550px; object-fit: cover;"
+              >
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <p class="mb-0 fs-6 text-white">🤝 <strong>Reach Out:</strong> Talking to friends, family, or professionals can provide support when you need it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAROUSEL CONTROLS -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#tipsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#tipsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- RESOURCE CARD -->
+    <section class="mt-5 mb-5">
+      <h2 class="mb-3 text-center text-primary">Featured Resources</h2>
+      <p class="text-center mx-auto mb-4" style="max-width: 600px;">
+        Explore these trusted resources to deepen your understanding of mental wellness:
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h5">Mindful Breathing Guide</h3>
+              <p class="card-text">
+                A beginner-friendly guide to calming your mind with simple breathing exercises.
+              </p>
+              <a
+                href="https://www.mindful.org/mindfulness-how-to-do-it/"
+                class="btn btn-outline-primary btn-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECK IN BUTTON -->
+    <section class="mt-5 mb-5">
+      <div class="mx-auto text-center" style="max-width: 600px;">
+        <h2 class="mb-3 text-primary fw-bold">Quick Mental Health Check</h2>
+        <p class="mb-4 fs-5 text-secondary">
+          Take a moment to complete a quick survey and check in on your mental well-being.
+        </p>
+        <a href="form.html" class="btn btn-success btn-lg px-4 fw-semibold shadow-sm">
+          Check In
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOOTSTRAP & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="dynamic.js"></script>
+
+  <!-- FOOTER -->
+  <footer class="bg-light text-center text-muted py-3 mt-5 border-top">
+    <small>
+      Images sourced from 
+      <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>, 
+      <a href="https://www.istockphoto.com" target="_blank" rel="noopener noreferrer">iStock</a>, 
+      and 
+      <a href="https://www.nutritionnews.abbott" target="_blank" rel="noopener noreferrer">Abbott Nutrition</a>. 
+      © 2025 Mental Wellness Hub. All rights reserved.
+    </small>
+  </footer>
+
+</body>
+</html>
