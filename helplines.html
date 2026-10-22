@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helplines & resources · Mental Wellness Hub</title>
+  <meta name="description" content="A searchable directory of Singapore mental health helplines, crisis lines and self-help resources.">
+  <meta name="theme-color" content="#2e7a6a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap, then our own styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Applies the saved theme before the page paints -->
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link visually-hidden-focusable">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c0-6 2.5-10.5 8-13-1 6.5-4 10.5-8 13Z"/><path d="M12 21c0-5-2.2-9-7-11 .6 5.3 3 9 7 11Z" opacity=".6"/></svg>
+          </span>
+          Mental Wellness Hub
+        </a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last ms-auto ms-lg-3">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="primaryNav">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="info.html">Learn</a></li>
+            <li class="nav-item"><a class="nav-link" href="tools.html">Toolkit</a></li>
+            <li class="nav-item"><a class="nav-link" href="form.html">Check-in</a></li>
+            <li class="nav-item"><a class="nav-link" href="helplines.html" aria-current="page">Get help</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <section class="page-hero" aria-labelledby="pageHeading">
+      <div class="container">
+        <span class="eyebrow">Get help</span>
+        <h1 id="pageHeading" class="mb-3">Helplines &amp; resources</h1>
+        <p class="section-intro lead">You don't have to wait for things to get worse to reach out. These Singapore services are free, confidential and here to listen.</p>
+
+        <div class="crisis-banner mt-4" role="note" aria-label="Emergency information">
+          <span class="fs-3" aria-hidden="true">🚨</span>
+          <p class="mb-0 flex-grow-1">
+            <strong>In immediate danger?</strong> Call <a href="tel:995" class="fw-bold">995</a> for an ambulance or go to the nearest emergency department.
+            To talk to someone right now, call <a href="tel:1771" class="fw-bold">1771</a> or <a href="tel:1767" class="fw-bold">1767</a> — both are open 24 hours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pt-4" aria-labelledby="directoryHeading">
+      <div class="container">
+        <h2 id="directoryHeading" class="visually-hidden">Directory</h2>
+
+        <div class="row g-3 align-items-end mb-4">
+          <div class="col-lg-4">
+            <label for="helplineSearch" class="form-label">Search</label>
+            <input type="search" id="helplineSearch" class="form-control" placeholder="e.g. youth, WhatsApp, 1767">
+          </div>
+          <div class="col-lg-8">
+            <fieldset id="helplineFilters">
+              <legend class="form-label fs-6">Filter by</legend>
+              <div class="choice-group">
+                <div class="choice-chip"><input type="radio" name="category" id="catAll" value="all" checked><label for="catAll">All</label></div>
+                <div class="choice-chip"><input type="radio" name="category" id="catCrisis" value="crisis"><label for="catCrisis">24/7 crisis</label></div>
+                <div class="choice-chip"><input type="radio" name="category" id="catYouth" value="youth"><label for="catYouth">Youth &amp; children</label></div>
+                <div class="choice-chip"><input type="radio" name="category" id="catWomen" value="women"><label for="catWomen">Women</label></div>
+                <div class="choice-chip"><input type="radio" name="category" id="catSelf" value="selfhelp"><label for="catSelf">Self-help</label></div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <p class="small text-muted" id="helplineCount" role="status" aria-live="polite"></p>
+        <div class="row g-4" id="helplineGrid"></div>
+
+        <p class="small text-muted mt-4 mb-0">
+          Numbers last checked in October 2026 against each organisation's own website. Opening hours can change — please check the website if a line doesn't connect.
+          Studying at a polytechnic or university? Your school's student counselling service is another good first stop.
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW TO HELP SOMEONE ELSE -->
+    <section class="section section-tint" aria-labelledby="helpOthersHeading">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-4 reveal">
+            <span class="eyebrow">Supporting others</span>
+            <h2 id="helpOthersHeading">Worried about a friend?</h2>
+            <p class="text-muted mb-0">You don't need the perfect words. Showing up and listening matters most.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-3">
+              <div class="col-sm-6 reveal"><article class="mw-card"><h3 class="h6">1. Ask directly</h3><p class="text-muted mb-0 small">"I've noticed you seem down lately. How are you really doing?" Asking about suicide does not put the idea in someone's head.</p></article></div>
+              <div class="col-sm-6 reveal"><article class="mw-card"><h3 class="h6">2. Listen without fixing</h3><p class="text-muted mb-0 small">Let them talk. Avoid "just think positive" — acknowledge that what they feel is real.</p></article></div>
+              <div class="col-sm-6 reveal"><article class="mw-card"><h3 class="h6">3. Help them connect</h3><p class="text-muted mb-0 small">Offer to sit with them while they call 1771, or help them book a counselling appointment.</p></article></div>
+              <div class="col-sm-6 reveal"><article class="mw-card"><h3 class="h6">4. Look after yourself</h3><p class="text-muted mb-0 small">Supporting someone is heavy. It's okay to talk to a helpline about how you're feeling too.</p></article></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <p class="h5 display-font mb-2">Mental Wellness Hub</p>
+          <p class="text-muted mb-3">Small, everyday tools for looking after your mind. Everything you save stays in your own browser.</p>
+          <p class="footer-crisis small mb-0">
+            Not a crisis service. If you are in danger, call <a href="tel:995">995</a>.
+            For someone to talk to, call <a href="tel:1771">1771</a> (National mindline) or <a href="tel:1767">1767</a> (SOS), any time.
+          </p>
+        </div>
+        <div class="col-6 col-lg-3 offset-lg-1">
+          <p class="fw-bold mb-2">Explore</p>
+          <ul class="list-unstyled footer-links mb-0">
+            <li><a href="info.html">Learn</a></li>
+            <li><a href="tools.html">Wellness toolkit</a></li>
+            <li><a href="form.html">Daily check-in</a></li>
+            <li><a href="helplines.html">Helplines</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <p class="fw-bold mb-2">Credits</p>
+          <p class="small text-muted mb-0">Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>. Built with HTML, CSS, Bootstrap 5 and JavaScript.</p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <p class="small text-muted mb-0">&copy; <span id="year">2026</span> Ethan Yap · Information here is general and not a substitute for professional advice.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/helplines.js"></script>
+</body>
+</html>
