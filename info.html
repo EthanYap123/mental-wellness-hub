@@ -3,293 +3,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mental Wellness Hub</title>
-  <meta name="description" content="Learn more about mental health, stress management, and mindfulness.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <title>Learn about mental health · Mental Wellness Hub</title>
+  <meta name="description" content="Understand mental health, common conditions, stress management tips and when to seek help. Test yourself with a short quiz.">
+  <meta name="theme-color" content="#2e7a6a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap, then our own styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Applies the saved theme before the page paints -->
+  <script src="assets/js/theme.js"></script>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
 
-  <!-- SKIP LINK -->
-  <a href="#mainContent" class="visually-hidden-focusable">Skip to main content</a>
+  <a href="#main" class="skip-link visually-hidden-focusable">Skip to main content</a>
 
-  <!-- NAV BAR -->
-  <nav class="navbar navbar-expand bg-white shadow-sm rounded px-3 py-2 mb-5" aria-label="Primary navigation">
-    <div class="container-fluid">
-      <div class="navbar-nav">
-        <a href="index.html" class="nav-link">Home Page</a>
-        <a href="info.html" class="nav-link me-3 active fw-bold" aria-current="page">Informational Page</a>
-        <a href="form.html" class="nav-link">Mental Health Check In</a>
-      </div>
-    </div>
-  </nav>
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c0-6 2.5-10.5 8-13-1 6.5-4 10.5-8 13Z"/><path d="M12 21c0-5-2.2-9-7-11 .6 5.3 3 9 7 11Z" opacity=".6"/></svg>
+          </span>
+          Mental Wellness Hub
+        </a>
 
-  <!-- MAIN CONTENT -->
-  <main id="mainContent" class="container mb-5 flex-grow-1">
-    <h1 class="mb-4 text-center text-primary fw-bold">Understanding Mental Health</h1>
-
-<!-- GRID LAYOUT -->
-<div class="row mb-5">
-  <div class="col-md-6 d-flex flex-column">
-    <h3>What is Mental Health?</h3>
-    <p>Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act, and it helps determine how we handle stress, relate to others, and make choices.</p>
-    <img
-      src="https://media.istockphoto.com/id/1459538299/photo/woman-hands-or-lotus-pose-meditation-on-sunset-beach-ocean-or-sea-in-mental-health-mind.jpg?s=612x612&w=0&k=20&c=bV9hF5cTOLc8xjc7US3zqoknNXwyOTpzU0w-7HLw_EI="
-      alt="Meditation"
-      class="img-fluid rounded shadow-sm w-100"
-      style="height: 300px; object-fit: cover;"
-    >
-    <p class="mt-3">Good mental health strengthens your ability to have fulfilling relationships, work productively, adapt to change, and cope with the stresses of life.</p>
-  </div>
-  <div class="col-md-6 d-flex flex-column">
-    <h3>Why It Matters</h3>
-    <p>Poor mental health can lead to serious physical health problems, substance abuse, and decreased productivity. Recognizing the importance of mental well-being allows individuals to seek help early and live healthier lives.</p>
-    <img
-      src="https://media.istockphoto.com/id/1428299005/photo/man-is-sitting-in-a-camping-chair-on-the-background-of-a-forest-lake-on-a-beautiful-summer.jpg?s=612x612&w=0&k=20&c=dQZLIQGXpyLxWvtdpsRkpRXEqM4vZCGefzPtV9h_9Uk="
-      alt="Relaxation"
-      class="img-fluid rounded shadow-sm w-100"
-      style="height: 300px; object-fit: cover;"
-    >
-    <p class="mt-3">Investing in mental health improves community well-being and reduces the social and economic burden of mental illnesses worldwide.</p>
-  </div>
-</div>
-
-
-    <!-- ACCORDION -->
-    <div class="accordion" id="mentalHealthAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="false"
-            aria-controls="collapseOne"
-          >
-            Common Mental Health Issues
+        <div class="d-flex align-items-center gap-2 order-lg-last ms-auto ms-lg-3">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingOne"
-          data-bs-parent="#mentalHealthAccordion"
-        >
-          <div class="accordion-body">
-            <ul>
-              <li><strong>Depression:</strong> A persistent feeling of sadness or loss of interest.</li>
-              <li><strong>Anxiety:</strong> Excessive worry or fear interfering with daily activities.</li>
-              <li><strong>Burnout:</strong> Emotional exhaustion caused by prolonged stress.</li>
-              <li><strong>Post-Traumatic Stress Disorder (PTSD):</strong> Anxiety following traumatic events.</li>
-              <li><strong>Bipolar Disorder:</strong> Mood swings ranging from depressive lows to manic highs.</li>
-            </ul>
-            <p>If you or someone you know experiences symptoms of these conditions, professional help is highly recommended.</p>
-          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="primaryNav">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="info.html" aria-current="page">Learn</a></li>
+            <li class="nav-item"><a class="nav-link" href="tools.html">Toolkit</a></li>
+            <li class="nav-item"><a class="nav-link" href="form.html">Check-in</a></li>
+            <li class="nav-item"><a class="nav-link" href="helplines.html">Get help</a></li>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
 
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo"
-            aria-expanded="false"
-            aria-controls="collapseTwo"
-          >
-            Tips for Managing Stress
-          </button>
-        </h2>
-        <div
-          id="collapseTwo"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingTwo"
-          data-bs-parent="#mentalHealthAccordion"
-        >
-          <div class="accordion-body">
-            <ul>
-              <li>Practice deep breathing or meditation.</li>
-              <li>Take regular breaks from screens and work.</li>
-              <li>Exercise regularly and eat a balanced diet.</li>
-              <li>Talk to someone you trust.</li>
-              <li>Maintain a consistent sleep schedule.</li>
-              <li>Set realistic goals and prioritize tasks.</li>
-            </ul>
-            <p>Remember, small daily habits can make a big difference in stress reduction over time.</p>
-          </div>
-        </div>
+  <main id="main" tabindex="-1">
+
+    <!-- PAGE INTRO -->
+    <section class="page-hero" aria-labelledby="pageHeading">
+      <div class="container">
+        <span class="eyebrow">Learn</span>
+        <h1 id="pageHeading" class="mb-3">Understanding mental health</h1>
+        <p class="section-intro lead mb-0">What mental health is, why it matters, how to manage stress and when to reach out. Then test yourself with a five-question quiz.</p>
       </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseThree"
-            aria-expanded="false"
-            aria-controls="collapseThree"
-          >
-            When to Seek Help
-          </button>
-        </h2>
-        <div
-          id="collapseThree"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingThree"
-          data-bs-parent="#mentalHealthAccordion"
-        >
-          <div class="accordion-body">
-            <p>
-              If you're feeling overwhelmed, hopeless, or unable to function in daily life, it's important to talk to a mental health professional. Early intervention can make a big difference.
-            </p>
-            <p>Other signs that you may need help include:</p>
-            <ul>
-              <li>Persistent mood changes or irritability</li>
-              <li>Withdrawal from social activities and loved ones</li>
-              <li>Thoughts of self-harm or suicide</li>
-              <li>Difficulty concentrating or making decisions</li>
-              <li>Changes in sleeping or eating patterns</li>
-            </ul>
-            <p>Seeking help is a sign of strength and an important step toward recovery.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FUTURE INSIGHTS -->
-    <aside class="bg-light p-4 rounded shadow-sm mb-5 float-md-end col-md-4 mt-5" style="max-width: 350px;">
-      <h3>Future Insights in Mental Health</h3>
-      <p>
-        The future of mental health care is being shaped by innovative technologies and evolving approaches, such as:
-      </p>
-      <ul>
-        <li><strong>AI-Based Therapy Apps:</strong> Chatbots and virtual therapists offer personalized, immediate support anytime.</li>
-        <li><strong>Virtual Reality (VR):</strong> Immersive therapy experiences for anxiety and PTSD are becoming more common.</li>
-        <li><strong>Wearables:</strong> Devices that track stress indicators to provide real-time feedback and early intervention.</li>
-        <li><strong>Teletherapy:</strong> Remote access to mental health professionals increases reach and convenience.</li>
-        <li><strong>Data Analytics:</strong> Predictive tools analyze behavioral patterns to prevent crises before they occur.</li>
-        <li><strong>Personalized Medicine:</strong> Tailored treatment plans based on genetic and environmental factors.</li>
-      </ul>
-      <p>
-        These advances promise more accessible, personalized, and proactive mental wellness support for all.
-      </p>
-    </aside>
-
-    <!-- QUIZ SECTION -->
-    <section class="mb-5 mt-5">
-      <h2 class="mb-4">Mental Wellness Quiz</h2>
-      <form id="quizForm" novalidate>
-        <!-- Question 1 -->
-        <fieldset class="mb-3">
-          <legend>1. What is a common symptom of depression?</legend>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" id="q1a1" value="wrong">
-            <label class="form-check-label" for="q1a1">Excessive happiness</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" id="q1a2" value="correct">
-            <label class="form-check-label" for="q1a2">Persistent sadness</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" id="q1a3" value="wrong">
-            <label class="form-check-label" for="q1a3">Increased energy</label>
-          </div>
-        </fieldset>
-
-        <!-- Question 2 -->
-        <fieldset class="mb-3">
-          <legend>2. Which of the following helps reduce stress?</legend>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" id="q2a1" value="correct">
-            <label class="form-check-label" for="q2a1">Meditation</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" id="q2a2" value="wrong">
-            <label class="form-check-label" for="q2a2">Avoiding sleep</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" id="q2a3" value="wrong">
-            <label class="form-check-label" for="q2a3">Ignoring feelings</label>
-          </div>
-        </fieldset>
-
-        <!-- Question 3 -->
-        <fieldset class="mb-3">
-          <legend>3. How often should you exercise for mental well-being?</legend>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q3" id="q3a1" value="wrong">
-            <label class="form-check-label" for="q3a1">Once a month</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q3" id="q3a2" value="correct">
-            <label class="form-check-label" for="q3a2">Regularly, multiple times a week</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q3" id="q3a3" value="wrong">
-            <label class="form-check-label" for="q3a3">Never</label>
-          </div>
-        </fieldset>
-
-        <!-- Question 4 -->
-        <fieldset class="mb-3">
-          <legend>4. Which of these is NOT a mindfulness practice?</legend>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q4" id="q4a1" value="wrong">
-            <label class="form-check-label" for="q4a1">Deep breathing</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q4" id="q4a2" value="wrong">
-            <label class="form-check-label" for="q4a2">Meditation</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q4" id="q4a3" value="correct">
-            <label class="form-check-label" for="q4a3">Multitasking</label>
-          </div>
-        </fieldset>
-
-        <!-- Question 5 -->
-        <fieldset class="mb-3">
-          <legend>5. When should you seek professional mental health help?</legend>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q5" id="q5a1" value="wrong">
-            <label class="form-check-label" for="q5a1">Only if symptoms last less than a day</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q5" id="q5a2" value="correct">
-            <label class="form-check-label" for="q5a2">If feeling overwhelmed or unable to function</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q5" id="q5a3" value="wrong">
-            <label class="form-check-label" for="q5a3">Never</label>
-          </div>
-        </fieldset>
-
-        <button id="submitQuiz" type="button" class="btn btn-primary">Submit Quiz</button>
-      </form>
-
-      <div id="quizResults" tabindex="0" class="mt-4" aria-live="polite"></div>
     </section>
+
+    <!-- WHAT / WHY -->
+    <section class="section pt-4" aria-label="Mental health basics">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <article class="mw-card">
+              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=75" alt="A person meditating cross-legged on a mat" class="rounded-4 w-100 mb-4 object-fit-cover" width="800" height="300" style="height: 15rem;" loading="lazy">
+              <h2 class="h3">What is mental health?</h2>
+              <p>Mental health includes our emotional, psychological and social wellbeing. It affects how we think, feel and act, and it shapes how we handle stress, relate to others and make choices.</p>
+              <p class="mb-0 text-muted">Good mental health strengthens your ability to build fulfilling relationships, work productively, adapt to change and cope with the stresses of life.</p>
+            </article>
+          </div>
+          <div class="col-md-6 reveal">
+            <article class="mw-card">
+              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=75" alt="Sunlight shining through tall trees in a forest" class="rounded-4 w-100 mb-4 object-fit-cover" width="800" height="300" style="height: 15rem;" loading="lazy">
+              <h2 class="h3">Why it matters</h2>
+              <p>Poor mental health can lead to physical health problems, substance misuse and lower productivity. Recognising the importance of mental wellbeing helps people seek help early and live healthier lives.</p>
+              <p class="mb-0 text-muted">Investing in mental health also improves community wellbeing and reduces the social and economic burden of mental illness.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="section section-tint" aria-labelledby="faqHeading">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-4 reveal">
+            <span class="eyebrow">Common questions</span>
+            <h2 id="faqHeading">Know the signs, know your options</h2>
+            <p class="text-muted">Tap a topic to expand it. If any of this sounds familiar, you don't have to work it out alone — <a href="helplines.html">see who you can talk to</a>.</p>
+          </div>
+
+          <div class="col-lg-8 reveal">
+            <div class="accordion" id="mentalHealthAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Common mental health conditions
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#mentalHealthAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Depression:</strong> a persistent feeling of sadness or loss of interest.</li>
+                      <li><strong>Anxiety:</strong> excessive worry or fear that gets in the way of daily activities.</li>
+                      <li><strong>Burnout:</strong> emotional exhaustion caused by prolonged stress.</li>
+                      <li><strong>Post-traumatic stress disorder (PTSD):</strong> ongoing distress after a traumatic event.</li>
+                      <li><strong>Bipolar disorder:</strong> mood swings ranging from depressive lows to manic highs.</li>
+                    </ul>
+                    <p class="mb-0">If you or someone you know has symptoms of these conditions, professional help is highly recommended.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Tips for managing stress
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#mentalHealthAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Practise deep breathing or meditation — try the <a href="tools.html#breathing">breathing exercise</a>.</li>
+                      <li>Take regular breaks from screens and work.</li>
+                      <li>Exercise regularly and eat a balanced diet.</li>
+                      <li>Talk to someone you trust.</li>
+                      <li>Keep a consistent sleep schedule.</li>
+                      <li>Set realistic goals and prioritise tasks.</li>
+                    </ul>
+                    <p class="mb-0">Small daily habits can make a big difference to stress over time.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    When to seek help
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#mentalHealthAccordion">
+                  <div class="accordion-body">
+                    <p>If you're feeling overwhelmed, hopeless or unable to function in daily life, talk to a mental health professional. Early support makes a big difference.</p>
+                    <p>Other signs you may need help include:</p>
+                    <ul>
+                      <li>Persistent mood changes or irritability</li>
+                      <li>Withdrawing from social activities and loved ones</li>
+                      <li>Thoughts of self-harm or suicide</li>
+                      <li>Difficulty concentrating or making decisions</li>
+                      <li>Changes in sleeping or eating patterns</li>
+                    </ul>
+                    <p class="mb-0">Seeking help is a sign of strength. <a href="helplines.html">Find a helpline</a> — many are free and open 24 hours.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE OF MENTAL HEALTH CARE -->
+    <section class="section" aria-labelledby="futureHeading">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="eyebrow">Looking ahead</span>
+          <h2 id="futureHeading">The future of mental health care</h2>
+          <p class="section-intro mx-auto">New technology and approaches are making support more accessible, personal and proactive.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4 reveal">
+            <article class="mw-card"><div class="feature-icon" aria-hidden="true">💬</div><h3 class="h5">Therapy apps & chatbots</h3><p class="text-muted mb-0">Digital tools offer guided exercises and immediate support between sessions.</p></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 reveal">
+            <article class="mw-card"><div class="feature-icon is-accent" aria-hidden="true">🥽</div><h3 class="h5">Virtual reality</h3><p class="text-muted mb-0">Immersive exposure therapy for anxiety and PTSD is becoming more common.</p></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 reveal">
+            <article class="mw-card"><div class="feature-icon is-warm" aria-hidden="true">⌚</div><h3 class="h5">Wearables</h3><p class="text-muted mb-0">Devices that track stress signals such as heart rate can prompt earlier support.</p></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 reveal">
+            <article class="mw-card"><div class="feature-icon" aria-hidden="true">💻</div><h3 class="h5">Teletherapy</h3><p class="text-muted mb-0">Remote sessions with professionals increase reach and convenience.</p></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 reveal">
+            <article class="mw-card"><div class="feature-icon is-accent" aria-hidden="true">📊</div><h3 class="h5">Data analytics</h3><p class="text-muted mb-0">Patterns in health data can help services spot people at risk sooner.</p></article>
+          </div>
+          <div class="col-sm-6 col-lg-4 reveal">
+            <article class="mw-card"><div class="feature-icon is-warm" aria-hidden="true">🧬</div><h3 class="h5">Personalised treatment</h3><p class="text-muted mb-0">Care plans increasingly reflect each person's biology, history and environment.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section section-tint" aria-labelledby="quizHeading">
+      <div class="container" style="max-width: 48rem;">
+        <div class="mb-4 reveal">
+          <span class="eyebrow">Test yourself</span>
+          <h2 id="quizHeading">Mental wellness quiz</h2>
+          <p class="text-muted">Five quick questions. You'll see an explanation for each answer at the end.</p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="progress flex-grow-1" role="progressbar" aria-label="Questions answered" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+              <div class="progress-bar" id="quizProgress" style="width: 0%"></div>
+            </div>
+            <span class="small text-muted text-nowrap" id="quizProgressText">0 of 5 answered</span>
+          </div>
+        </div>
+
+        <form id="quizForm" novalidate>
+          <fieldset class="quiz-question">
+            <legend>1. What is a common symptom of depression?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1a" value="a"><label class="form-check-label" for="q1a">Excessive happiness</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1b" value="b"><label class="form-check-label" for="q1b">Persistent sadness</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1c" value="c"><label class="form-check-label" for="q1c">Increased energy</label></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>2. Which of the following helps reduce stress?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2a" value="a"><label class="form-check-label" for="q2a">Meditation</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2b" value="b"><label class="form-check-label" for="q2b">Avoiding sleep</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2c" value="c"><label class="form-check-label" for="q2c">Ignoring feelings</label></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>3. How often should you exercise for mental wellbeing?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3a" value="a"><label class="form-check-label" for="q3a">Once a month</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3b" value="b"><label class="form-check-label" for="q3b">Regularly, several times a week</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3c" value="c"><label class="form-check-label" for="q3c">Never</label></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>4. Which of these is NOT a mindfulness practice?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4a" value="a"><label class="form-check-label" for="q4a">Deep breathing</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4b" value="b"><label class="form-check-label" for="q4b">Meditation</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4c" value="c"><label class="form-check-label" for="q4c">Multitasking</label></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>5. When should you seek professional mental health help?</legend>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5a" value="a"><label class="form-check-label" for="q5a">Only if symptoms last less than a day</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5b" value="b"><label class="form-check-label" for="q5b">When feeling overwhelmed or unable to function</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5c" value="c"><label class="form-check-label" for="q5c">Never</label></div>
+          </fieldset>
+
+          <div class="d-flex gap-2">
+            <button id="submitQuiz" type="submit" class="btn btn-primary">Check my answers</button>
+            <button id="retryQuiz" type="button" class="btn btn-soft" hidden>Try again</button>
+          </div>
+        </form>
+
+        <div id="quizResults" class="mt-4" tabindex="-1" aria-live="polite"></div>
+      </div>
+    </section>
+
   </main>
 
-<!-- FOOTER -->
-<footer class="bg-light text-center text-muted py-3 mt-5 border-top">
-  <small>
-    Images sourced from 
-    <a href="https://www.istockphoto.com" target="_blank" rel="noopener noreferrer">iStock</a>. 
-    © 2025 Mental Wellness Hub. All rights reserved.
-  </small>
-</footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <p class="h5 display-font mb-2">Mental Wellness Hub</p>
+          <p class="text-muted mb-3">Small, everyday tools for looking after your mind. Everything you save stays in your own browser.</p>
+          <p class="footer-crisis small mb-0">
+            Not a crisis service. If you are in danger, call <a href="tel:995">995</a>.
+            For someone to talk to, call <a href="tel:1771">1771</a> (National mindline) or <a href="tel:1767">1767</a> (SOS), any time.
+          </p>
+        </div>
+        <div class="col-6 col-lg-3 offset-lg-1">
+          <p class="fw-bold mb-2">Explore</p>
+          <ul class="list-unstyled footer-links mb-0">
+            <li><a href="info.html">Learn</a></li>
+            <li><a href="tools.html">Wellness toolkit</a></li>
+            <li><a href="form.html">Daily check-in</a></li>
+            <li><a href="helplines.html">Helplines</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <p class="fw-bold mb-2">Credits</p>
+          <p class="small text-muted mb-0">Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>. Built with HTML, CSS, Bootstrap 5 and JavaScript.</p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <p class="small text-muted mb-0">&copy; <span id="year">2026</span> Ethan Yap · Information here is general and not a substitute for professional advice.</p>
+    </div>
+  </footer>
 
-
-
-  <!-- BOOTSTRAP JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  
-  <!-- YOUR EXTERNAL JAVASCRIPT -->
-  <script src="dynamic.js"></script>
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/quiz.js"></script>
 </body>
 </html>

@@ -3,213 +3,321 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mental Wellness Hub</title>
-  <meta name="description" content="Mental Wellness Hub - Your go-to resource for mindfulness, stress management, and mental health tips.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <title>Mental Wellness Hub — Your calm corner online</title>
+  <meta name="description" content="Track your mood, practise guided breathing, keep a gratitude journal and find Singapore mental health helplines.">
+  <meta name="theme-color" content="#2e7a6a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap, then our own styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Applies the saved theme before the page paints -->
+  <script src="assets/js/theme.js"></script>
 </head>
 <body>
 
-  <!-- SKIP LINK -->
-  <a href="#mainContent" class="visually-hidden-focusable">Skip to main content</a>
+  <a href="#main" class="skip-link visually-hidden-focusable">Skip to main content</a>
 
-  <!-- NAV BAR -->
-  <nav class="navbar navbar-expand bg-white shadow-sm rounded px-3 py-2 mb-5" aria-label="Primary navigation">
-    <div class="container-fluid">
-      <div class="navbar-nav">
-        <a href="index.html" class="nav-link me-3 active fw-bold" aria-current="page">Home Page</a>
-        <a href="info.html" class="nav-link me-3">Informational Page</a>
-        <a href="form.html" class="nav-link">Mental Health Check In</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MAIN CONTENT -->
-  <main id="mainContent" class="container" tabindex="-1" aria-labelledby="mainHeading">
-    
-    <!-- WELCOME SECTION -->
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <h1 id="mainHeading" class="display-4 fw-bold text-primary mb-4">Welcome to Your Mental Wellness Hub</h1>
-        <p class="lead text-secondary mb-4">
-          Find resources and tips to support your mental health and wellbeing.
-          Whether you want to learn mindfulness or manage stress, this is your space.
-        </p>
-        <a href="info.html" class="btn btn-primary">Learn More</a>
-      </div>
-
-      <div class="col-md-6 text-center">
-        <img
-          src="https://media.istockphoto.com/id/1479494606/vector/mental-health-concept.jpg?s=612x612&w=0&k=20&c=frJSKdP-5fNTvhqHEuSFVB47wxMRH_y866ebJhuUTTU="
-          alt="Illustration of mental wellness concept"
-          class="img-fluid rounded shadow-sm"
-          loading="lazy"
-          decoding="async"
-          width="612"
-          height="612"
-        >
-        <p class="text-muted small mt-2 mb-5">Find your inner peace and clarity.</p>
-      </div>
-    </div>
-
-    <!-- CAROUSEL SECTION -->
-    <section class="mt-5 mb-5">
-      <h2 class="mb-4 text-center text-primary">Quick Tips for Mental Wellness</h2>
-
-      <div id="tipsCarousel" class="carousel slide mx-auto shadow" data-bs-ride="carousel" style="max-width: 800px;">
-        
-        <!-- CAROUSEL INDICATORS -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mindfulness"></button>
-          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="1" aria-label="Hydration"></button>
-          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="2" aria-label="Take Breaks"></button>
-          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="3" aria-label="Learn Continuously"></button>
-          <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="4" aria-label="Reach Out"></button>
-        </div>
-
-        <!-- CAROUSEL IMAGES -->
-        <div class="carousel-inner rounded">
-          <div class="carousel-item active">
-            <div class="position-relative">
-              <img 
-              src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1000&q=80"
-              class="d-block w-100 rounded"
-              alt="Mindfulness"
-              style="height: 550px; object-fit: cover;"
-              >
-              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                <p class="mb-0 fs-6 text-white">🌱 <strong>Practice Mindfulness:</strong> Spend a few minutes each day focusing on your breath or a calming activity.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item active">
-            <div class="position-relative">
-              <img 
-              src="https://www.nutritionnews.abbott/content/dam/an/newsroom/us/en/images/articles/healthy-living/diet-wellness/New%20Image_Hydration%20and%20Mental%20Health-930x405-young-fit-woman-drinking.jpg"
-              class="d-block w-100 rounded"
-              alt="Hydrated"
-              style="height: 550px; object-fit: cover;"
-              >
-              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                <p class="mb-0 fs-6 text-white">💧 <strong>Stay Hydrated:</strong> Drinking enough water can boost your energy and improve your mood.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="carousel-item">
-            <div class="position-relative">
-              <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
-              class="d-block w-100 rounded"
-              alt="Take Breaks"
-              style="height: 550px; object-fit: cover;"
-              >
-              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                <p class="mb-0 fs-6 text-white">🧘 <strong>Take Breaks:</strong> Step away from screens and stretch or walk outside for mental clarity.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="position-relative">
-              <img 
-              src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1000&q=80"
-              class="d-block w-100 rounded"
-              alt="Learn"
-              style="height: 550px; object-fit: cover;"
-              >
-              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                <p class="mb-0 fs-6 text-white">📖 <strong>Learn Continuously:</strong> Explore mental health resources and stay informed.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="position-relative">
-              <img 
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=80"
-              class="d-block w-100 rounded"
-              alt="Reach Out"
-              style="height: 550px; object-fit: cover;"
-              >
-              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                <p class="mb-0 fs-6 text-white">🤝 <strong>Reach Out:</strong> Talking to friends, family, or professionals can provide support when you need it.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CAROUSEL CONTROLS -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#tipsCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#tipsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- RESOURCE CARD -->
-    <section class="mt-5 mb-5">
-      <h2 class="mb-3 text-center text-primary">Featured Resources</h2>
-      <p class="text-center mx-auto mb-4" style="max-width: 600px;">
-        Explore these trusted resources to deepen your understanding of mental wellness:
-      </p>
-      <div class="row justify-content-center">
-        <div class="col-md-6 mb-3">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5">Mindful Breathing Guide</h3>
-              <p class="card-text">
-                A beginner-friendly guide to calming your mind with simple breathing exercises.
-              </p>
-              <a
-                href="https://www.mindful.org/mindfulness-how-to-do-it/"
-                class="btn btn-outline-primary btn-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHECK IN BUTTON -->
-    <section class="mt-5 mb-5">
-      <div class="mx-auto text-center" style="max-width: 600px;">
-        <h2 class="mb-3 text-primary fw-bold">Quick Mental Health Check</h2>
-        <p class="mb-4 fs-5 text-secondary">
-          Take a moment to complete a quick survey and check in on your mental well-being.
-        </p>
-        <a href="form.html" class="btn btn-success btn-lg px-4 fw-semibold shadow-sm">
-          Check In
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c0-6 2.5-10.5 8-13-1 6.5-4 10.5-8 13Z"/><path d="M12 21c0-5-2.2-9-7-11 .6 5.3 3 9 7 11Z" opacity=".6"/></svg>
+          </span>
+          Mental Wellness Hub
         </a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last ms-auto ms-lg-3">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="primaryNav">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="info.html">Learn</a></li>
+            <li class="nav-item"><a class="nav-link" href="tools.html">Toolkit</a></li>
+            <li class="nav-item"><a class="nav-link" href="form.html">Check-in</a></li>
+            <li class="nav-item"><a class="nav-link" href="helplines.html">Get help</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroHeading">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7">
+            <span class="eyebrow">Your calm corner online</span>
+            <h1 id="heroHeading" class="mb-4">Take a breath. You're in the right place.</h1>
+            <p class="lead mb-4">
+              Mental Wellness Hub brings simple, science-backed habits together in one place:
+              track your mood, slow down with guided breathing, notice the good with a gratitude
+              journal, and find help when you need it.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="tools.html#breathing" class="btn btn-primary btn-lg">Start a breathing exercise</a>
+              <a href="form.html" class="btn btn-soft btn-lg">Do a 2-minute check-in</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <aside class="today-card" id="todayCard" aria-labelledby="todayGreeting">
+              <p class="text-muted small mb-1">Your day at a glance</p>
+              <h2 id="todayGreeting" class="h3 mb-3">Hello</h2>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <div class="today-stat"><span class="value" id="todayMood">–</span><span class="label">Today's mood</span></div>
+                </div>
+                <div class="col-6">
+                  <div class="today-stat"><span class="value" id="todayStreak">0 days</span><span class="label">Check-in streak</span></div>
+                </div>
+                <div class="col-6">
+                  <div class="today-stat"><span class="value" id="todayJournal">0</span><span class="label">Journal entries</span></div>
+                </div>
+                <div class="col-6">
+                  <div class="today-stat"><span class="value" id="todayBreath">0</span><span class="label">Breathing sessions</span></div>
+                </div>
+              </div>
+              <a href="tools.html#mood" class="btn btn-outline-primary w-100" id="todayCta">Log today's mood</a>
+              <p class="small text-muted mt-3 mb-0">Saved only in this browser — no account, nothing sent anywhere.</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section section-tint" aria-labelledby="featuresHeading">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="eyebrow">What you can do here</span>
+          <h2 id="featuresHeading">Four small tools, one calmer routine</h2>
+          <p class="section-intro mx-auto">Each takes less than five minutes. Use one, or build them into a daily habit.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3 reveal">
+            <article class="mw-card mw-card-hover">
+              <div class="feature-icon" aria-hidden="true">📈</div>
+              <h3 class="h5">Mood tracker</h3>
+              <p class="text-muted">Log how you feel each day and spot patterns in a simple 7-day chart.</p>
+              <a href="tools.html#mood" class="card-link-arrow card-stretch">Track your mood</a>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <article class="mw-card mw-card-hover">
+              <div class="feature-icon is-accent" aria-hidden="true">🫧</div>
+              <h3 class="h5">Guided breathing</h3>
+              <p class="text-muted">Follow an animated circle through box, 4-7-8 or calm breathing patterns.</p>
+              <a href="tools.html#breathing" class="card-link-arrow card-stretch">Breathe with me</a>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <article class="mw-card mw-card-hover">
+              <div class="feature-icon is-warm" aria-hidden="true">📓</div>
+              <h3 class="h5">Gratitude journal</h3>
+              <p class="text-muted">Write down three good things. Get prompts when you're stuck, and export anytime.</p>
+              <a href="tools.html#journal" class="card-link-arrow card-stretch">Open the journal</a>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <article class="mw-card mw-card-hover">
+              <div class="feature-icon is-danger" aria-hidden="true">🤝</div>
+              <h3 class="h5">Helplines</h3>
+              <p class="text-muted">A searchable list of Singapore helplines, from 24/7 crisis lines to youth services.</p>
+              <a href="helplines.html" class="card-link-arrow card-stretch">Find support</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS CAROUSEL -->
+    <section class="section" aria-labelledby="tipsHeading">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="eyebrow">Everyday habits</span>
+          <h2 id="tipsHeading">Quick tips for mental wellness</h2>
+        </div>
+
+        <div id="tipsCarousel" class="carousel slide tips-carousel reveal" data-bs-ride="carousel" data-bs-interval="7000" aria-roledescription="carousel" aria-label="Wellness tips">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Tip 1: Practise mindfulness"></button>
+            <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="1" aria-label="Tip 2: Stay hydrated"></button>
+            <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="2" aria-label="Tip 3: Take breaks"></button>
+            <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="3" aria-label="Tip 4: Keep learning"></button>
+            <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="4" aria-label="Tip 5: Reach out"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" aria-roledescription="slide" aria-label="1 of 5">
+              <div class="tip-slide">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=75" alt="A person meditating cross-legged on a mat" width="900" height="600">
+                <div class="tip-body">
+                  <span class="eyebrow">Tip 1 of 5</span>
+                  <h3 class="h3">🌱 Practise mindfulness</h3>
+                  <p class="text-muted mb-0">Spend a few minutes each day focusing on your breath or one calming activity. Small, regular moments add up.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" aria-roledescription="slide" aria-label="2 of 5">
+              <div class="tip-slide">
+                <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=75" alt="A glass bottle of water on a table" width="900" height="600" loading="lazy">
+                <div class="tip-body">
+                  <span class="eyebrow">Tip 2 of 5</span>
+                  <h3 class="h3">💧 Stay hydrated</h3>
+                  <p class="text-muted mb-0">Even mild dehydration can affect your energy, focus and mood. Keep a bottle within reach.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" aria-roledescription="slide" aria-label="3 of 5">
+              <div class="tip-slide">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=75" alt="A winding road through green hills" width="900" height="600" loading="lazy">
+                <div class="tip-body">
+                  <span class="eyebrow">Tip 3 of 5</span>
+                  <h3 class="h3">🧘 Take breaks</h3>
+                  <p class="text-muted mb-0">Step away from screens to stretch or walk outside. A short break often brings back clarity.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" aria-roledescription="slide" aria-label="4 of 5">
+              <div class="tip-slide">
+                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=900&q=75" alt="An open notebook and laptop on a desk" width="900" height="600" loading="lazy">
+                <div class="tip-body">
+                  <span class="eyebrow">Tip 4 of 5</span>
+                  <h3 class="h3">📖 Keep learning</h3>
+                  <p class="text-muted mb-0">Understanding how your mind works makes it easier to notice when something's off. <a href="info.html">Start with our guide</a>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" aria-roledescription="slide" aria-label="5 of 5">
+              <div class="tip-slide">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=75" alt="Portrait of a smiling man" width="900" height="600" loading="lazy">
+                <div class="tip-body">
+                  <span class="eyebrow">Tip 5 of 5</span>
+                  <h3 class="h3">🤝 Reach out</h3>
+                  <p class="text-muted mb-0">Talking to friends, family or a professional can lighten the load. <a href="helplines.html">See who you can call</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#tipsCarousel" data-bs-slide="prev">
+            <span class="carousel-arrow" aria-hidden="true">←</span>
+            <span class="visually-hidden">Previous tip</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#tipsCarousel" data-bs-slide="next">
+            <span class="carousel-arrow" aria-hidden="true">→</span>
+            <span class="visually-hidden">Next tip</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED RESOURCES -->
+    <section class="section section-tint" aria-labelledby="resourcesHeading">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="eyebrow">Read more</span>
+          <h2 id="resourcesHeading">Featured resources</h2>
+          <p class="section-intro mx-auto">Trusted places to deepen your understanding of mental wellness.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="mw-card mw-card-hover">
+              <h3 class="h5">Mindful breathing guide</h3>
+              <p class="text-muted">A beginner-friendly introduction to calming your mind with simple breathing exercises.</p>
+              <a href="https://www.mindful.org/mindfulness-how-to-do-it/" class="card-link-arrow card-stretch" target="_blank" rel="noopener noreferrer">Read on Mindful.org<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="mw-card mw-card-hover">
+              <h3 class="h5">MindSG self-help hub</h3>
+              <p class="text-muted">Singapore's government resource with articles and tools for everyday mental wellbeing.</p>
+              <a href="https://www.healthhub.sg/programmes/mindsg" class="card-link-arrow card-stretch" target="_blank" rel="noopener noreferrer">Visit HealthHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="mw-card mw-card-hover">
+              <h3 class="h5">National mindline 1771</h3>
+              <p class="text-muted">Talk to a trained counsellor by phone, WhatsApp or webchat — 24 hours, and you can stay anonymous.</p>
+              <a href="https://www.mindline.sg/" class="card-link-arrow card-stretch" target="_blank" rel="noopener noreferrer">Go to mindline.sg<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECK-IN CALL TO ACTION -->
+    <section class="section" aria-labelledby="ctaHeading">
+      <div class="container">
+        <div class="mw-card text-center py-5 reveal">
+          <h2 id="ctaHeading" class="mb-3">How are you, really?</h2>
+          <p class="section-intro mx-auto mb-4">Answer six quick questions about your mood, stress and sleep, and get a few ideas tailored to today.</p>
+          <a href="form.html" class="btn btn-primary btn-lg">Start my check-in</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- BOOTSTRAP & JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="dynamic.js"></script>
-
   <!-- FOOTER -->
-  <footer class="bg-light text-center text-muted py-3 mt-5 border-top">
-    <small>
-      Images sourced from 
-      <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>, 
-      <a href="https://www.istockphoto.com" target="_blank" rel="noopener noreferrer">iStock</a>, 
-      and 
-      <a href="https://www.nutritionnews.abbott" target="_blank" rel="noopener noreferrer">Abbott Nutrition</a>. 
-      © 2025 Mental Wellness Hub. All rights reserved.
-    </small>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <p class="h5 display-font mb-2">Mental Wellness Hub</p>
+          <p class="text-muted mb-3">Small, everyday tools for looking after your mind. Everything you save stays in your own browser.</p>
+          <p class="footer-crisis small mb-0">
+            Not a crisis service. If you are in danger, call <a href="tel:995">995</a>.
+            For someone to talk to, call <a href="tel:1771">1771</a> (National mindline) or <a href="tel:1767">1767</a> (SOS), any time.
+          </p>
+        </div>
+        <div class="col-6 col-lg-3 offset-lg-1">
+          <p class="fw-bold mb-2">Explore</p>
+          <ul class="list-unstyled footer-links mb-0">
+            <li><a href="info.html">Learn</a></li>
+            <li><a href="tools.html">Wellness toolkit</a></li>
+            <li><a href="form.html">Daily check-in</a></li>
+            <li><a href="helplines.html">Helplines</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <p class="fw-bold mb-2">Credits</p>
+          <p class="small text-muted mb-0">Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>. Built with HTML, CSS, Bootstrap 5 and JavaScript.</p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <p class="small text-muted mb-0">&copy; <span id="year">2026</span> Ethan Yap · Information here is general and not a substitute for professional advice.</p>
+    </div>
   </footer>
 
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
 </html>
