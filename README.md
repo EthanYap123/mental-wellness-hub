@@ -4,7 +4,7 @@ A responsive mental wellness web app with a daily mood tracker, animated breathi
 
 I first built it in Year 1 Semester 1 at Singapore Polytechnic for the Front-End Development (FED) module. In Year 2 I rebuilt it with a new design system, dark mode, accessibility fixes and four new interactive tools.
 
-<!-- Add a link here once the site is deployed, e.g. GitHub Pages -->
+**Live demo:** [ethanyap123.github.io/mental-wellness-hub](https://ethanyap123.github.io/mental-wellness-hub/)
 
 ![Home page](docs/screenshots/home.jpg)
 
