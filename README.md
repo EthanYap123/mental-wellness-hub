@@ -115,6 +115,11 @@ This is a student project for learning and general wellbeing. It is **not** a me
 
 Helpline details were last checked against each organisation's website in October 2026.
 
+## What I learned
+
+- Accessibility is a lot of small things: labelled controls, live regions, reduced motion and keyboard focus. I'd skipped them all in Year 1.
+- Escaping user input matters even in a "harmless" journal app.
+
 ## Credits
 
 - Photos from [Unsplash](https://unsplash.com)
