@@ -124,3 +124,7 @@ Helpline details were last checked against each organisation's website in Octobe
 
 **Ethan Yap**, Diploma in Information Technology, Singapore Polytechnic
 GitHub: [@EthanYap123](https://github.com/EthanYap123)
+
+## License
+
+[MIT](LICENSE)
