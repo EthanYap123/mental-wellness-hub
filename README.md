@@ -6,6 +6,8 @@ I first built it in Year 1 Semester 1 at Singapore Polytechnic for the Front-End
 
 **Live demo:** [ethanyap123.github.io/mental-wellness-hub](https://ethanyap123.github.io/mental-wellness-hub/)
 
+[![CI](https://github.com/EthanYap123/mental-wellness-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/EthanYap123/mental-wellness-hub/actions/workflows/ci.yml)
+
 ![Home page](docs/screenshots/home.jpg)
 
 ## Features
@@ -36,24 +38,9 @@ I first built it in Year 1 Semester 1 at Singapore Polytechnic for the Front-End
 
 There is no build step and nothing to install.
 
-## Getting started
+## Architecture
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/EthanYap123/mental-wellness-hub.git
-   cd mental-wellness-hub
-   ```
-
-2. Serve the folder with any static server, for example:
-
-   ```bash
-   python -m http.server 8000
-   ```
-
-3. Open <http://localhost:8000> in your browser.
-
-You can also just open `index.html` directly. All the scripts are plain (non-module) files, so they work over `file://` too.
+Five static pages share one stylesheet built on CSS variables, `theme.js` for the light and dark toggle, and `main.js`, a set of shared helpers that includes a `localStorage` wrapper that never throws. Each interactive page has its own script that checks its elements exist before it runs, which is what fixed the Year 1 version's console errors. Everything a visitor saves stays in `localStorage` (see [Data and privacy](#data-and-privacy)).
 
 ## Project structure
 
@@ -83,6 +70,31 @@ mental-wellness-hub/
     └── screenshots/      Images used in this README
 ```
 
+## Getting started
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/EthanYap123/mental-wellness-hub.git
+   cd mental-wellness-hub
+   ```
+
+2. Serve the folder with any static server, for example:
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+3. Open <http://localhost:8000> in your browser.
+
+You can also just open `index.html` directly. All the scripts are plain (non-module) files, so they work over `file://` too.
+
+## Testing and CI
+
+There is no automated test suite yet. Every page was checked by hand at 375 px, 768 px and desktop widths, in light and dark mode, along with the forms, tools, quiz and helpline filters.
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every push to `main` and every pull request. It validates every page with html-validate, checks every script parses with `node --check`, and fails if a page links to a local file that doesn't exist. GitHub Pages deploys the site from `main`.
+
 ## Data and privacy
 
 All data is stored in the browser under these `localStorage` keys:
@@ -108,6 +120,11 @@ Clearing your browser's site data removes everything.
 | Check-in summary | Quiz results | Mobile |
 | --- | --- | --- |
 | ![Check-in](docs/screenshots/checkin.jpg) | ![Quiz](docs/screenshots/quiz.jpg) | ![Mobile view](docs/screenshots/mobile.jpg) |
+
+## What I'd improve next
+
+- Add automated accessibility checks to CI, so regressions in labels, contrast or focus are caught on every pull request.
+- Make it work offline as an installable app, so the breathing exercise is there without a connection.
 
 ## Disclaimer
 
